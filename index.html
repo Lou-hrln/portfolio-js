@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>portfolio</title>
+  <style>
+    /* box sizing */
+    *{
+      box-sizing: border-box;
+    }
+
+    :root {
+      overscroll-behavior: none;
+    }
+
+    *{
+      box-sizing: border-box;
+    }
+    
+    html{
+      scroll-behavior: smooth;
+    }
+
+
+    body{
+      margin-left: 20px;
+      padding: 20px;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #000000;
+      overflow-x: hidden;
+    }
+
+    .vignette{
+      background-color: transparent;
+      position: absolute;
+      top: 0;
+      left: 0;
+      /* background-color: rgba(0,0,255,0.2); */
+    }
+
+    .vignette img {
+      width: 60%;
+      height: auto;
+      display: none;
+    }
+
+    .vignette h1 {
+      font-family:'Courier New', Courier, monospace;
+      color: #ffffff;
+      font-size: 40px;
+      padding: 5px;
+    }
+
+    .vignette p {
+      font-family: 'avenir next','Courier New', Courier, monospace;
+      color: #ffffff;
+      font-size: 14px;
+      padding: 50px;
+    } 
+
+  h3 {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 26px;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    }
+
+    h2 {
+      font-family: 'avenir next','Courier New', Courier, monospace;
+      font-size: 18px;
+      color: rgb(255, 255, 255);
+      padding: 5px;
+      padding-bottom: 10px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+
+      position: fixed;
+      bottom: 0;
+      left: 20;
+      width: 100%;
+    }
+
+h3:hover{
+      cursor: pointer;
+      color: rgb(255, 255, 255);
+}
+
+    h3:hover + h2 {
+      opacity: 1;
+    }
+
+   h1{
+    font-family:'Courier New', Courier, monospace;
+      font-size: 18px;
+      color: rgb(255, 255, 255);
+      text-align: center;
+    }
+
+    p{
+      font-family: 'avenir next','Courier New', Courier, monospace;
+      font-size: 15px;
+      color: rgb(255, 255, 255);
+      padding: 5px;
+      padding-bottom: 20px;
+      text-align: center;
+      margin: 0;
+    } 
+
+    img{
+      width: 100%;
+      height: auto;
+    }
+    .fixed{
+      position: fixed;
+    }
+
+    .projets.fixed{
+      top:100px;
+    }
+    .overlay{
+      position: absolute;
+      width: 100vw;
+      min-height: 100vh;
+      z-index: 9999;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 48px;
+      top: 0;
+      left:0; 
+   
+    }
+    .close{
+      position: fixed;
+      top: 24px;
+      right: 24px;
+      width: 48px;
+      height: 48px;
+      text-align: center;
+      line-height: 48px;
+      color: #ffffff;
+      cursor: pointer;
+      font-size: 48px;
+      background: #000000ba;
+      border-radius: 24px;
+    }
+
+    .wrap{
+      width:100%;
+    }
+
+    .fiche{
+      margin: 0px auto;
+      max-width: 740px;
+      background: #000000;
+      padding: 0 20px 20px;  
+      padding-bottom: 0;
+    }
+
+    .fiche img{
+      margin:0 -20px 20px;
+      width: calc(100% + 40px);
+    }
+
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <h3>Lou Herlin / Portfolio d'une étudiante en graphisme</h3>
+  
+      <h2>✉︎ lou.herlin.esad@gmail.com
+        <br>
+        ☎︎ 07 88 30 21 40</h2>
+    
+  </header>
+  <div class="projets"></div>
+  <!-- gsap -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7"></script>
+  <!-- motionPath -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap/dist/MotionPathPlugin.min.js"></script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
